@@ -1,0 +1,163 @@
+.container{
+    background: #1D2B64;  
+    background: -webkit-linear-gradient(to right, #F8CDDA, #1D2B64);  
+    background: linear-gradient(to right, #F8CDDA, #1D2B64);   
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.formContainer{
+    border: 1px solid silver;
+    padding: 50px;
+    margin: 50px;
+    width: fit-content;
+    min-height: fit-content;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.header{
+    color: rgb(6, 143, 197);
+    text-align: left;
+    margin-bottom: 50px;
+    font-size: 1.8rem;
+}
+
+.formField{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    height: 75px;
+}
+
+.formField label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: rgb(114, 112, 112);
+    font-size: 0.9rem;
+}
+
+.formInput{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0px 10px;
+    border: 1px solid silver;
+    transition: all 0.2s ease-in;
+}
+
+.unCompleted{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0px 10px;
+    border: 1px solid rgb(245, 6, 6);
+    transition: all 0.2s ease-in;
+}
+
+.formField span{
+    color: red;
+    margin-top: 5px;
+    text-align: left;
+    background-color: rgb(241, 168, 163);
+    width: fit-content;
+    font-size: 0.7rem;
+    line-height: 10px;
+    padding: 2px 3px;
+    border-radius: 3px;
+}
+
+.formInput:focus,
+.unCompleted:focus{
+    outline: none;
+    line-height: 30px;
+    border: 1px solid rgb(0, 153, 255);    
+}
+
+.checkBox{
+    display: flex;
+    flex-direction: row !important;
+    font-size: 0.7rem;
+    align-items: center;
+    text-align: center;
+    height: 20px !important;
+}
+
+
+.formField:nth-child(6) label{
+    color: rgb(38, 153, 219);
+}
+
+.formButtons{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.formButtons button {
+    padding: 0.8em 1.8em;
+    border: 2px solid rgb(10, 90, 182);
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: rgb(10, 90, 182);
+    cursor: pointer;
+   }
+   
+   .formButtons button::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: rgb(10, 90, 182);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   .formButtons button:hover::before {
+    width: 105%;
+   }
+   
+   .formButtons button:hover {
+    color: #fff;
+   }
+   
+
+
+.formButtons a{
+    text-decoration: none;
+    color: rgb(10, 90, 182);
+    transition: all 0.1 ease-in;
+    font-weight: 700;
+}
+
+@media(max-width:440px){
+    .formContainer{
+        padding: 20px;
+        margin:50px 20px;
+    }
+
+    .formContainer{
+        width: 90%;
+    }
+
+    .formInput{
+        width: 90%;
+    }
+
+    .unCompleted{
+        width: 90%;
+    }
+}
